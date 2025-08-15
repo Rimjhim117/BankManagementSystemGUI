@@ -54,9 +54,10 @@ Ensure that the necessary data files (users.txt, transactions.txt, and statement
 Run the main class to start the application:
 Bash
 
-java Main
+        java Main
 
 This will launch the login screen, where you can sign up a new user or log in with existing credentials.
+
 📊 Data Files
 
 The application uses these text files to store data:
