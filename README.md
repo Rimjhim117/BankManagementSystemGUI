@@ -1,67 +1,101 @@
-Bank Management System
+# 🏦 Bank Management System
 
-This is a proof-of-concept for a basic banking management system developed in Java. The application features a simple graphical user interface (GUI) for user and administrative functions, with all data securely stored in local text files. This project is a great example of a complete system that handles user authentication, transaction processing, and data persistence without a formal database.
+This is a proof-of-concept for a **basic banking management system** developed in **Java**.  
+The application features a simple **graphical user interface (GUI)** for both user and administrative functions, with all data securely stored in **local text files**.  
 
-✨ Key Features
+It demonstrates a complete system that handles **user authentication, transaction processing, and data persistence** without relying on a formal database.
 
-    User Management: Allows new users to securely sign up and create an account (SignupFrame.java).
+---
 
-    Secure Login: Users and administrators can log in to their respective dashboards using a simple, credentials-based authentication system (LoginFrame.java).
+## ✨ Key Features
 
-    User Dashboard: Provides a clear GUI for logged-in users to perform essential banking operations, such as checking their balance, making deposits, and initiating withdrawals (DashboardFrame.java).
+- **👤 User Management**  
+  Allows new users to securely sign up and create an account (`SignupFrame.java`).
 
-    Administrative Interface: A separate administrative dashboard offers control over the system, likely including user management and system-wide data oversight (AdminDashboard.java).
+- **🔐 Secure Login**  
+  Users and administrators can log in to their respective dashboards using a simple, credentials-based authentication system (`LoginFrame.java`).
 
-    File-Based Data Persistence: The system stores all application data (user accounts, transaction history, and statements) in plain text files, demonstrating a simple yet effective method of data handling (users.txt, transactions.txt, statement_username.txt).
+- **📋 User Dashboard**  
+  Provides a clear GUI for logged-in users to check their balance, make deposits, and withdraw funds (`DashboardFrame.java`).
 
-📂 Project Structure
+- **🛠️ Administrative Interface**  
+  A separate admin dashboard provides system-wide oversight and user management (`AdminDashboard.java`).
 
-    Main.java: The primary entry point for the application, which launches the initial login screen.
+- **💾 File-Based Data Persistence**  
+  Stores all application data (users, transactions, and statements) in plain text files:  
+  - `users.txt`  
+  - `transactions.txt`  
+  - `statement_[username].txt`
 
-    LoginFrame.java: Manages the user login interface and validates credentials against the users.txt file.
+---
 
-    SignupFrame.java: Handles the registration form for new users and saves their information to the users.txt file.
+## 📂 Project Structure
 
-    DashboardFrame.java: Implements the main user interface where authenticated users can interact with their accounts.
+- **`Main.java`** → Primary entry point, launches the login screen.  
+- **`LoginFrame.java`** → Manages login interface and validates credentials from `users.txt`.  
+- **`SignupFrame.java`** → Handles registration form and stores new user data in `users.txt`.  
+- **`DashboardFrame.java`** → Main user interface for authenticated banking operations.  
+- **`AdminDashboard.java`** → GUI and logic for administrative control.  
+- **`users.txt`** → Stores user credentials. Each line = one user record.  
+- **`transactions.txt`** → Central log file recording all transactions.  
+- **`statement_[username].txt`** → Individual transaction history for each user.  
 
-    AdminDashboard.java: Contains the GUI and business logic for the administrative user's view.
+---
 
-    users.txt: A plain text file that stores user credentials. Each line likely corresponds to a user record.
+## 🚀 Getting Started
 
-    transactions.txt: A central log file that records all banking transactions.
+### ✅ Prerequisites
+- Install **Java Development Kit (JDK) 8 or newer**.
 
-    statement_[username].txt: A file generated for each user, which serves as their individual transaction history or bank statement.
+### ⚙️ Compiling & Running
 
-🚀 Getting Started
+1. Open a terminal/command prompt and navigate to the project directory.  
+2. Compile the source files:  
 
-To run this application, you need to have a Java Development Kit (JDK) installed on your system.
+   ```bash
+   javac Main.java AdminDashboard.java DashboardFrame.java LoginFrame.java SignupFrame.java
+   ```
+3. 📂 Ensure data files exist:  
+   - `users.txt`  
+   - `transactions.txt`  
+   - `statement_[username].txt` (for each user)  
 
-Prerequisites
+   > 🆕 If running for the first time, create **empty `users.txt` and `transactions.txt`** files.
 
-    Java Development Kit (JDK) 8 or newer.
+4. ▶️ Run the main class:  
 
-Compiling and Running
+   ```bash
+   java Main
+This will launch the login screen, where you can **sign up as a new user** or **log in with existing credentials**.
 
-    Open your terminal or command prompt and navigate to the project directory.
+---
 
-    Compile all the Java source files using the Java compiler:
-    Bash
+## 📊 Data Files  
 
-javac Main.java AdminDashboard.java DashboardFrame.java LoginFrame.java SignupFrame.java
+- `users.txt` → Stores user credentials (**username & password**)  
+- `transactions.txt` → Records every banking transaction  
+- `statement_[username].txt` → Individual bank statement file for each user  
 
-Ensure that the necessary data files (users.txt, transactions.txt, and statement_username.txt for any existing users) are present in the same directory. If you are running the application for the first time, you may need to create empty users.txt and transactions.txt files.
+---
 
-Run the main class to start the application:
-Bash
+## 💡 Future Enhancements  
 
-        java Main
+🔒 **Password Hashing**  
+Replace plain text storage with secure hashing for stronger authentication.  
 
-This will launch the login screen, where you can sign up a new user or log in with existing credentials.
+🗄️ **Database Integration**  
+Upgrade from text files to a relational or NoSQL database for scalability.  
 
-📊 Data Files
+📱 **Improved GUI**  
+Enhance the user experience with modern UI libraries or frameworks.  
 
-The application uses these text files to store data:
+📊 **Reporting Tools**  
+Generate monthly/annual transaction reports for users and admins.  
 
-    users.txt: This file contains user data. Each line likely represents a user with their username and password.
+---
 
-    transactions.txt: This file records every transaction, possibly including the user ID, transaction type, amount, and timestamp.
+## 👩‍💻 Author  
+
+**Rimjhim Srivastava**  
+GitHub: [rimjhim117](https://github.com/rimjhim117)  
+
